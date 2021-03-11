@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    background-image: url("./images/bcg.png");
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    user-select: none;
+    overflow: hidden;
+}
+
+.game {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.game__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transform-origin: center;
+    width: 640px;
+    height: 480px;
+    background-image: url("./images/start_screen.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.game__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.start-screen {
+    display: flex;
+    padding-top: 140px;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-screen button:nth-child(1) {
+    margin-right: 30px;
+}
+
+.start-screen button:nth-child(2) {
+    margin-left: 30px;
+}
+
+.start-screen__button {
+    display: flex;
+    flex-grow: 0;
+    height: 95px;
+    cursor: pointer;
+    background-image: url("./images/button_start.png");
+    background-size: contain;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    width: 212px;
+    max-width: 363px;
+    margin-top: 33px;
+    border: none;
+}
+
+.start-screen__button:hover {
+    background-image: url("./images/button_start_hover.png");
+}
+
+.start-screen__button--is-settings {
+    background-image: url("./images/button_settings.png");
+}
+
+.start-screen__button--is-settings:hover {
+    background-image: url("./images/button_settings_hover.png");
+}
