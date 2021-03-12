@@ -1,3 +1,7 @@
+:root {
+    --scale-value: 1;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -32,7 +36,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(var(--scale-value));
     transform-origin: center;
     width: 640px;
     height: 480px;
@@ -52,17 +56,11 @@ body {
 
 .start-screen {
     display: flex;
+    flex-direction: column;
     padding-top: 140px;
     justify-content: center;
     align-items: center;
-}
-
-.start-screen button:nth-child(1) {
-    margin-right: 30px;
-}
-
-.start-screen button:nth-child(2) {
-    margin-left: 30px;
+    margin-top: 16px;
 }
 
 .start-screen__button {
@@ -76,7 +74,7 @@ body {
     background-repeat: no-repeat;
     width: 212px;
     max-width: 363px;
-    margin-top: 33px;
+    margin-top: 10px;
     border: none;
 }
 
@@ -90,4 +88,35 @@ body {
 
 .start-screen__button--is-settings:hover {
     background-image: url("./images/button_settings_hover.png");
+}
+
+.level-select {
+    display: flex;
+    padding: 140px 60px;
+    flex-wrap: wrap;
+    background-image: url("./images/levelseletscreen.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.level-select__button {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+    border: 0;
+    font-size: 20px;
+    background-image: url('./images/levelicon.png');
+    background-size: cover;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.level-select__button:hover {
+    background-image: url('./images/leveliconhover.png');
+}
+
+.hidden {
+    display: none;
 }
