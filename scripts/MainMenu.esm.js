@@ -9,14 +9,14 @@ const SCALE_PROPERTY = '--scale-value';
 
 
 class MainMenu extends Common {
-    constructor(){
+    constructor() {
         super(START_SCREEN_ID);
         this.bindToGameElements();
         this.resizeGameWindow();
         window.addEventListener('resize', this.resizeGameWindow);
     }
 
-    bindToGameElements(){
+    bindToGameElements() {
         const gameStartButton = this.bindToElement(START_SCREEN_GAME_BUTTON_ID);
         const gameSettingsButton = this.bindToElement(START_SCREEN_SETTINGS_BUTTON_ID);
 
@@ -24,12 +24,12 @@ class MainMenu extends Common {
         gameSettingsButton.addEventListener('click', () => this.showSettingsScreen());
     }
 
-    showLevelScreen(){
+    showLevelScreen() {
         this.changeVisibilityScreen(this.element, HIDDEN_SCREEN);
         this.changeVisibilityScreen(levelSelect.element, VISIBLE_SCREEN);
     }
 
-    showSettingsScreen(){
+    showSettingsScreen() {
         console.log('Ustawienia gry');
     }
 
