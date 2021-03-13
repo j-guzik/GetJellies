@@ -1,5 +1,6 @@
 import { Common, HIDDEN_SCREEN, VISIBLE_SCREEN } from './Common.esm.js';
 import { levelSelect } from './LevelSelect.esm.js';
+import { CANVAS_WIDTH, CANVAS_HEIGHT } from './Canvas.esm.js';
 
 const START_SCREEN_ID = 'js-start-screen';
 const START_SCREEN_GAME_BUTTON_ID = 'js-start-game';
@@ -34,7 +35,7 @@ class MainMenu extends Common {
 
     resizeGameWindow() {
         const { innerWidth: width, innerHeight: height } = window;
-        const scale = Math.min(width / 880, height / 650);
+        const scale = Math.min(width / CANVAS_WIDTH, height / CANVAS_HEIGHT);
 
         document.documentElement.style.setProperty(SCALE_PROPERTY, scale);
     }
