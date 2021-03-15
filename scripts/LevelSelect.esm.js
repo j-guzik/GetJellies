@@ -18,7 +18,6 @@ const gameLevels = [
 ];
 
 const LEVEL_SELECT_BUTTON_ID = 'level-select__button';
-
 const LEVEL_SELECT_ID = 'js-level-select-screen';
 
 class LevelSelect extends Common {
