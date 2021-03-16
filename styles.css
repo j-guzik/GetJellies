@@ -14,6 +14,7 @@
 
 body {
     background-image: url("./images/bcg.png");
+    backdrop-filter: blur(2px);
     background-position: center;
     width: 100vw;
     height: 100vh;
@@ -92,7 +93,7 @@ body {
 
 .level-select {
     display: flex;
-    padding: 140px 60px;
+    padding: 140px 75px;
     flex-wrap: wrap;
     background-image: url("./images/levelseletscreen.png");
     background-size: contain;
@@ -103,7 +104,8 @@ body {
 .level-select__button {
     width: 70px;
     height: 70px;
-    margin-right: 20px;
+    margin-right: 26px;
+    margin-top: -11px;
     border: 0;
     font-size: 20px;
     background-image: url('./images/levelicon.png');
@@ -115,6 +117,65 @@ body {
 
 .level-select__button:hover {
     background-image: url('./images/leveliconhover.png');
+}
+
+.end-screen{
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding-top: 257px;
+    padding-left: 120px;
+    background-image: url('./images/level-failed.png');
+    background-color: rgba(255, 255, 255, 0.7);
+    background-size: 300px;
+    backdrop-filter: blur(2px);
+    border-radius: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#js-high-scores{
+    position: relative;
+    top: 38px;
+}
+
+.end-screen--is-win{
+    background-image: url('./images/level-victory.png');
+}
+
+.end-screen__buttons-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-right: 76px;
+    margin-top: 65px;
+}
+
+.end-screen__button{
+    border: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 40px;
+    background-image: url('./images/exit-button.png');
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.end-screen__button:hover{
+    background-image: url('./images/exit-button-hover.png');
+}
+
+.end-screen__button--is-restart{
+    background-image: url('./images/restart-buttton.png');
+}
+
+.end-screen__button--is-restart:hover{
+    background-image: url('./images/restart-buttton-hover.png');
 }
 
 .hidden {
