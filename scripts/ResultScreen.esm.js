@@ -2,6 +2,8 @@ import { canvas } from './Canvas.esm.js';
 import { Common, HIDDEN_SCREEN, VISIBLE_SCREEN } from './Common.esm.js';
 import { levelSelect } from './LevelSelect.esm.js';
 import { mainMenu } from './MainMenu.esm.js';
+import { userData } from './UserData.esm.js';
+import { game } from './Game.esm.js';
 
 const RESULT_SCREEN_END_SCREEN_ID = 'js-end-screen';
 const RESULT_SCREEN_USER_POINTS_ID = 'js-user-points';
