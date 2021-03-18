@@ -8,12 +8,13 @@ import { mouseController } from './MouseController.esm.js';
 import { Diamond, DIAMOND_SIZE, NUMBER_OF_DIAMONDS_TYPES } from './Diamond.esm.js';
 import { resultScreen } from './ResultScreen.esm.js';
 import { userData } from './UserData.esm.js';
+import { mainMenu } from './MainMenu.esm.js';
 
 export const DIAMOND_ARRAY_WIDTH = 7;
 const DIAMOND_ARRAY_HEIGHT = DIAMOND_ARRAY_WIDTH + 1;
-const SWAPING_SPEED = 8;
+const SWAPING_SPEED = 13;
 const LAST_ELEMENT_DIAMONDS_ARRAY = DIAMOND_ARRAY_WIDTH * DIAMOND_ARRAY_HEIGHT - 1;
-const TRANSPARENCY_SPEED = 15;
+const TRANSPARENCY_SPEED = 9;
 
 // const gameState = {
 //     pointsToWin: 7000,
@@ -27,11 +28,14 @@ class Game extends Common {
     }
 
     playLevel(level) {
-        const { numberOfMovements, pointsToWin, board } = gameLevels[level - 1];
+        const { numberOfMovements, pointsToWin, board, } = gameLevels[level - 1];
 
         window.removeEventListener(DATALOADED_EVENT_NAME, this.playLevel);
         this.gameState = new GameState(level, numberOfMovements, pointsToWin, board, media.diamondsSprite);
         this.changeVisibilityScreen(canvas.element, VISIBLE_SCREEN);
+        this.changeVisibilityScreen(mainMenu.miniSettingsLayerElement, VISIBLE_SCREEN);
+        media.isInLevel = true;
+        media.playBackgroundMusic();
         this.animate();
     }
 
@@ -403,6 +407,8 @@ class Game extends Common {
 
     checkEndOfGame() {
         if (!this.gameState.getLeftMovement() && !this.gameState.getIsMoving() && !this.gameState.getIsSwaping()) {
+            media.isInLevel = false;
+            media.stopBackgroundMusic();
             const isPlayerWinner = this.gameState.isPlayerWinner();
             const currentLevel = Number(this.gameState.level);
 

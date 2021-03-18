@@ -130,7 +130,7 @@ body {
     padding-top: 257px;
     padding-left: 120px;
     background-image: url('./images/level-failed.png');
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
     background-size: 300px;
     backdrop-filter: blur(2px);
     border-radius: 25px;
@@ -178,6 +178,161 @@ body {
     background-image: url('./images/restart-buttton-hover.png');
 }
 
+.settings-screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 125px 200px;
+    background-image: url("./images/settings.png");
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(2px);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 350px;
+    z-index: 999;
+    border-radius: 50px;
+}
+
+.origin-of-music{
+    margin-top: 33px;
+}
+
+.origin-of-music a{
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.settings-screen__buttons-group{
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-top: 10px;
+}
+
+.settings-screen__button{
+    margin-right: 10px;
+    width: 75px;
+    height: 75px;
+    border: 0;
+    background-color: transparent;
+    background-size: 75px;
+    cursor: pointer;
+}
+
+.settings-screen__button--is-up,
+.settings-screen__button--is-down{
+    position: absolute;
+    top: 265px;
+    left: 258px;
+    width: 52px;
+    height: 52px;
+    background-size: 52px;
+}
+
+.settings-screen__button--is-down{
+    left: 378px;
+}
+
+.settings-screen__button--is-music {
+    background-image: url("./images/musicon.png");
+}
+
+.settings-screen__button--is-music .off{
+    background-image: url("./images/musicoff.png");
+}
+
+.settings-screen__button--is-music:hover,
+.settings-screen__button--is-music-off:hover
+{
+    background-image: url("./images/musichover.png");
+}
+
+.settings-screen__button--is-up {
+    background-image: url("./images/plus.png");
+}
+
+.settings-screen__button--is-up:hover{
+    background-image: url("./images/plusHover.png");
+}
+
+.settings-screen__button--is-down {
+    background-image: url("./images/minus.png");
+}
+
+.settings-screen__button--is-down:hover {
+    background-image: url("./images/minusHover.png");
+}
+
+.settings-screen__button--is-exit{
+    position: absolute;
+    top: 325px;
+    width: 65px;
+    height: 65px;
+    background-size: 65px;
+    background-image: url("./images/exit-button.png");
+}
+
+.settings-screen__button--is-exit:hover{
+    background-image: url("./images/exit-button-hover.png");
+}
+
+.mini-settings-layer{
+    top: unset;
+    right: 108px;
+    bottom: 116px;
+    left: unset;
+    width: 50px;
+    height: 50px;
+}
+
+
+.mini-settings-layer__button{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 0;
+    background-image: url('./images/mini-settings.png');
+    cursor: pointer;
+}
+
+.mini-settings-layer__button:hover{
+    background-image: url("./images/mini-settings-hover.png");
+}
+
 .hidden {
     display: none;
+}
+
+
+.loading-screen {
+    background-image: url('./images/loader.png');
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(2px);
+    border-radius: 50px;
+}
+
+.loading-screen__info{
+    font-size: 36px;
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    color: white;
+    font-weight: bold;
+}
+
+.loading-screen__info span:nth-child(1){
+    position: absolute;
+    top: 15px;
+    left: -84px;
+}
+
+
+.loading-screen__info span:nth-child(2){
+    position: absolute;
+    top: 15px;
+    left: 63px;
 }
