@@ -72,4 +72,4 @@ function runGameIfLoaded(that) {
 
 export const loader = new Loader();
 
-setTimeout(function () { $(".loader").fadeOut("slow"); }, 1300);
+setTimeout(function () { $(".loader").fadeOut("slow"); }, 2500);
