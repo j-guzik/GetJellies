@@ -12,9 +12,9 @@ import { mainMenu } from './MainMenu.esm.js';
 
 export const DIAMOND_ARRAY_WIDTH = 8;
 const DIAMOND_ARRAY_HEIGHT = DIAMOND_ARRAY_WIDTH + 1;
-const SWAPING_SPEED = 8;
+const SWAPING_SPEED = 9;
 const LAST_ELEMENT_DIAMONDS_ARRAY = DIAMOND_ARRAY_WIDTH * DIAMOND_ARRAY_HEIGHT - 1;
-const TRANSPARENCY_SPEED = 9;
+const TRANSPARENCY_SPEED = 16;
 
 class Game extends Common {
     constructor() {
