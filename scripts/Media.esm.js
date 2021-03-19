@@ -33,19 +33,16 @@ class Media {
 
     playBackgroundMusic() {
         if (!this.allowedMusic || !this._backgroundMusic) {
-            // MUSIC_ON_OFF_BUTTON_ID.classList.add("off");
             return;
         }
 
         this._backgroundMusic.loop = true;
         this._backgroundMusic.play();
-        // MUSIC_ON_OFF_BUTTON_ID.classList.toogle("off");
     }
 
     stopBackgroundMusic() {
         if (this._backgroundMusic) {
             this._backgroundMusic.pause();
-            // MUSIC_ON_OFF_BUTTON_ID.classList.add("off");
         }
     }
 

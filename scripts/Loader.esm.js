@@ -14,6 +14,7 @@ class Loader extends Common {
         this.clearFlags();
     }
 
+
     bindToElements() {
         this.loadingScreenElement = this.bindToElement(LOADER_ELEMENT_ID);
         this.currentElement = this.bindToElement(LOAD_CURRENT_ID);
@@ -48,14 +49,7 @@ class Loader extends Common {
 
     itemLoaded(event) {
         event.target.removeEventListener(event.type, this.itemLoaded, false);
-        this.loadedCounter++;
-        this.currentElement.textContent = this.loadedCounter;
-        this.totalElement.textContent = this.totalCounter;
-        if (this.loadedCounter === this.totalCounter) {
-            this.clearFlags();
-            this.changeVisibilityScreen(this.loadingScreenElement, HIDDEN_CLASS);
-            window.dispatchEvent(new CustomEvent(DATALOADED_EVENT_NAME));
-        }
+        setTimeout(() => runGameIfLoaded(this), 1000);
     }
 
     clearFlags() {
@@ -63,8 +57,19 @@ class Loader extends Common {
         this.loadedCounter = 0;
         this.totalCounter = 0;
     }
+}
 
+function runGameIfLoaded(that) {
+    that.loadedCounter++;
+
+    if (that.loadedCounter === that.totalCounter) {
+        that.clearFlags();
+        that.changeVisibilityScreen(that.loadingScreenElement, HIDDEN_CLASS);
+        window.dispatchEvent(new CustomEvent(DATALOADED_EVENT_NAME));
+    }
 
 }
 
 export const loader = new Loader();
+
+setTimeout(function () { $(".loader").fadeOut("slow"); }, 1300);

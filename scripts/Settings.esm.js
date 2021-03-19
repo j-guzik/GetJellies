@@ -23,9 +23,10 @@ class Settings extends Common {
         musicOnOffElement.addEventListener("click", () => media.toogleMusicOnOff());
         musicVolumeUpElement.addEventListener('click', () => media.increaseMusicVolume());
         musicVolumeDownElement.addEventListener('click', () => media.decreaseMusicVolume());
-        // musicOnOffElement.addEventListener("click", () => this.classList.toogle("off"));
+        $('.settings-screen__button--is-music').click(function () {
+            $(this).toggleClass('off');
+        });
     }
 }
-
 
 export const settings = new Settings();

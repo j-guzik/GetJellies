@@ -10,17 +10,11 @@ import { resultScreen } from './ResultScreen.esm.js';
 import { userData } from './UserData.esm.js';
 import { mainMenu } from './MainMenu.esm.js';
 
-export const DIAMOND_ARRAY_WIDTH = 7;
+export const DIAMOND_ARRAY_WIDTH = 8;
 const DIAMOND_ARRAY_HEIGHT = DIAMOND_ARRAY_WIDTH + 1;
-const SWAPING_SPEED = 13;
+const SWAPING_SPEED = 8;
 const LAST_ELEMENT_DIAMONDS_ARRAY = DIAMOND_ARRAY_WIDTH * DIAMOND_ARRAY_HEIGHT - 1;
 const TRANSPARENCY_SPEED = 9;
-
-// const gameState = {
-//     pointsToWin: 7000,
-//     getPlayerPoints: () => 1000,
-//     getLeftMovement: () => 30,
-// };
 
 class Game extends Common {
     constructor() {
@@ -66,9 +60,7 @@ class Game extends Common {
 
         const xClicked = Math.floor((mouseController.x - GAME_BOARD_X_OFFSET) / DIAMOND_SIZE);
         const yClicked = Math.floor((mouseController.y - GAME_BOARD_Y_OFFSET) / DIAMOND_SIZE);
-        if (!yClicked || xClicked < 0 || xClicked >= DIAMOND_ARRAY_WIDTH || yClicked >= DIAMOND_ARRAY_HEIGHT)
-        // (!yClicked || xClicked >= DIAMOND_ARRAY_WIDTH || yClicked >= DIAMOND_ARRAY_HEIGHT) 
-        {
+        if (!yClicked || xClicked < 0 || xClicked >= DIAMOND_ARRAY_WIDTH || yClicked >= DIAMOND_ARRAY_HEIGHT) {
             mouseController.state = 0;
             return;
         }

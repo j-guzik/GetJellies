@@ -43,7 +43,7 @@ class LevelSelect extends Common {
     }
 
     loadLevel(level) {
-        // debugger;
+
         if (media.backgroundImage && media.diamondsSprite && media.backgroundMusic) {
             game.playLevel(level);
             return;
@@ -64,3 +64,4 @@ class LevelSelect extends Common {
 }
 
 export const levelSelect = new LevelSelect();
+

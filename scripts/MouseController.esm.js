@@ -8,7 +8,9 @@ class MouseController {
         this.state = 0;
         this.clicked = false;
 
-        canvas.element.addEventListener('mousedown', event => this.mouseDown(event));
+        canvas.element.addEventListener('mousedown', event => {
+            this.mouseDown(event);
+        });
     }
 
     mouseDown(event) {
@@ -19,6 +21,7 @@ class MouseController {
         this.x = (event.clientX - offset.left) / scale;
         this.y = (event.clientY - offset.top) / scale;
         this.clicked = true;
+
     }
 }
 

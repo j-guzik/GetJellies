@@ -12,6 +12,13 @@
 </head>
 
 <body>
+    <div class="loader">
+        <div class="loader-bcg">
+            <span><img src="./images/jelly2.png" alt="blue jelly"></span>
+            <span><img src="./images/jelly1.png" alt="pink jelly"></span>
+            <span><img src="./images/jelly3.png" alt="black jelly"></span>
+        </div>
+    </div>
     <div class="game">
         <div class="game__container">
             <div class="game__layer start-screen" id="js-start-screen">
@@ -22,11 +29,15 @@
             <canvas class="game__layer game-screen hidden" id="js-game-screen"></canvas>
             <div class="game__layer loading-screen hidden" id="js-loading-screen">
                 <p class="loading-screen__info">
-                    <span id="js-loading-screen-current">0</span><span id="js-loading-screen-total">0</span>
+                    <span id="js-loading-screen-current"></span><span id="js-loading-screen-total"></span>
+                <div class="loader-bcg board">
+                    <span><img src="./images/jelly2.png" alt="blue jelly"></span>
+                    <span><img src="./images/jelly1.png" alt="pink jelly"></span>
+                    <span><img src="./images/jelly3.png" alt="black jelly"></span>
+                </div>
                 </p>
             </div>
             <div class="game__layer end-screen hidden" id="js-end-screen">
-                <!-- <p class="end-screen__header" id="js-game-result"></p> -->
                 <p class="end-screen__points"><span id="js-user-points">0</span></p>
                 <p class="end-screen__points"><span id="js-high-scores">0</span></p>
                 <div class="end-screen__buttons-wrapper">
@@ -37,7 +48,7 @@
             </div>
             <div class="game__layer settings-screen hidden" id="js-settings-screen">
                 <p class="origin-of-music">
-                    <a href="https://www.bensound.com/">Royalty Free Music from Bensound.</a>
+                    <a href="https://www.bensound.com/" target="_blank">Royalty Free Music from Bensound.</a>
                 </p>
                 <div class="settings-screen__buttons-group">
                     <button class="settings-screen__button settings-screen__button--is-music" id="js-music-on-off"
@@ -55,6 +66,8 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./index.esm.js" type="module"></script>
 </body>
 
