@@ -11,6 +11,7 @@ import { userData } from './UserData.esm.js';
 import { mainMenu } from './MainMenu.esm.js';
 
 export const DIAMOND_ARRAY_WIDTH = 8;
+
 const DIAMOND_ARRAY_HEIGHT = DIAMOND_ARRAY_WIDTH + 1;
 const SWAPING_SPEED = 9;
 const LAST_ELEMENT_DIAMONDS_ARRAY = DIAMOND_ARRAY_WIDTH * DIAMOND_ARRAY_HEIGHT - 1;
