@@ -14,9 +14,10 @@
 }
 
 body {
-    background-image: url("./images/bcg.png");
+    background-image: url("./images/bcg.jpg");
     backdrop-filter: blur(2px);
     background-position: center;
+    background-size: cover;
     width: 100vw;
     height: 100vh;
     user-select: none;
